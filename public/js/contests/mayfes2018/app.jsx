@@ -102,6 +102,9 @@ class App extends React.Component {
 		if (['mayfes2021-day1', 'mayfes2021-practice1'].includes(this.contestId)) {
 			return [0, 4, 5, 9, 10, 14, 15, 19, 20, 24].includes(cell);
 		}
+		if (this.contestId === 'mayfes2022-day1') {
+			return [0, 4, 5, 9, 10, 14, 15, 19, 20, 24].includes(cell);
+		}
 		return false;
 	};
 
