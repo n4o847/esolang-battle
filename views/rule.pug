@@ -8,10 +8,13 @@ block content
     if !contest.isStarted() && (!user || !user.admin)
       include partials/countdown.pug
     else
-      h1 Rule
-      != description.en
+      if description.en
+        h1 Rule
+        != description.en
       
-      hr(style={margin: '5em 0'})
+      if description.en && description.ja
+        hr(style={margin: '5em 0'})
       
-      h1 ルール
-      != description.ja
+      if description.ja
+        h1 ルール
+        != description.ja
