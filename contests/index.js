@@ -17,6 +17,7 @@ const mayfes2021Day2 = require('./mayfes2021-day2');
 const mayfes2021Practice1 = require('./mayfes2021-practice1');
 const mayfes2021Practice2 = require('./mayfes2021-practice2');
 const mayfes2022Day1 = require('./mayfes2022-day1');
+const mayfes2022Day2 = require('./mayfes2022-day2');
 
 
 module.exports = {
@@ -39,4 +40,5 @@ module.exports = {
 	'mayfes2021-practice2': mayfes2021Practice2,
 	7: contest7,
 	'mayfes2022-day1': mayfes2022Day1,
+	'mayfes2022-day2': mayfes2022Day2,
 };
