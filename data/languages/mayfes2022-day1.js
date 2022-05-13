@@ -3,7 +3,7 @@ const flatten = require('lodash/flatten');
 const langsData = require('../langs.json');
 
 const languages = [
-	['', 'brainfuck-esotope', 'produire', 'compile-time-typescript', ''],
+	['', 'brainfuck-esomer', 'produire', 'compile-time-typescript', ''],
 	['', '', 'node', '', ''],
 	['', 'c-gcc', 'golfscript', 'python3', ''],
 	['', '', 'bash-busybox', '', ''],
