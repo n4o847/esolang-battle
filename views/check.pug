@@ -14,7 +14,8 @@ block content
         label Language
         select.form-control.checker-language
           each language in availableLanguages
-            option(value=language.slug)= language.name
+            if language.slug
+              option(value=language.slug)= language.name
       .form-group
         label Code
         p.text-secondary
