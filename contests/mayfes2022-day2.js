@@ -1,29 +1,19 @@
 const assert = require('assert');
 
 module.exports.getPrecedingIndices = (cellIndex) => {
+	const width = 4;
+	const height = 4;
 	assert(cellIndex >= 0);
-	assert(cellIndex < 16);
+	assert(cellIndex < width * height);
 
-	const x = cellIndex % 4;
-	const y = Math.floor(cellIndex / 4);
+	const x = cellIndex % width;
+	const y = Math.floor(cellIndex / width);
 
 	const precedingCells = [];
-
-	if (x - 1 >= 0) {
-		precedingCells.push(y * 4 + (x - 1));
-	}
-
-	if (x + 1 < 4) {
-		precedingCells.push(y * 4 + (x + 1));
-	}
-
-	if (y - 1 >= 0) {
-		precedingCells.push((y - 1) * 4 + x);
-	}
-
-	if (y + 1 < 4) {
-		precedingCells.push((y + 1) * 4 + x);
-	}
+	precedingCells.push(y * width + (x + 3) % width);
+	precedingCells.push(y * width + (x + 1) % width);
+	precedingCells.push(((y + 3) % height) * width + x);
+	precedingCells.push(((y + 1) % height) * width + x);
 
 	return precedingCells;
 };
