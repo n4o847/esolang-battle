@@ -234,6 +234,12 @@
     "disasm": false
   },
   {
+    "slug": "brainfuck-esomer",
+    "name": "Brainfuck (esomer)",
+    "link": "https://github.com/fabon-f/bf-esomer",
+    "disasm": false
+  },
+  {
     "slug": "goruby",
     "name": "goruby",
     "link": "https://github.com/ruby/ruby/blob/trunk/man/goruby.1",
