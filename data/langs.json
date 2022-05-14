@@ -237,7 +237,7 @@
     "slug": "brainfuck-esomer",
     "name": "Brainfuck (esomer)",
     "link": "https://github.com/fabon-f/bf-esomer",
-    "disasm": false
+    "disasm": true
   },
   {
     "slug": "goruby",
