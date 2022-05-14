@@ -1,6 +1,6 @@
 const THREE = require('three');
 const OrbitControls = require('three-orbitcontrols');
-const TrackballControls = require('three-trackballcontrols').default;
+const TrackballControls = require('three-trackballcontrols');
 
 const truncatedCuboctahedron = require('../../../../data/truncated-cuboctahedron');
 
