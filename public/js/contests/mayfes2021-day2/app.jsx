@@ -274,7 +274,7 @@ class App extends React.Component {
 								<p>
 									{'Solution: '}
 									<a
-										href={`/contests/mayfes2021-day2/submissions/${selectedLanguage.solution._id}`}
+										href={`/contests/${this.contestId}/submissions/${selectedLanguage.solution._id}`}
 										target="_blank"
 										rel="noopener noreferrer"
 									>
@@ -327,7 +327,7 @@ class App extends React.Component {
 									<>
 										{' Check out the detail '}
 										<a
-											href={`/contests/mayfes2021-day2/submissions/${this.state.messageDetail}`}
+											href={`/contests/${this.contestId}/submissions/${this.state.messageDetail}`}
 											target="_blank"
 											rel="noopener noreferrer"
 										>

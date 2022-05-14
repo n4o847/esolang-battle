@@ -1,21 +1,26 @@
-const assert = require('assert');
+const truncatedCuboctahedron = require('../data/truncated-cuboctahedron');
 
 module.exports.getPrecedingIndices = (cellIndex) => {
-	const width = 4;
-	const height = 4;
-	assert(cellIndex >= 0);
-	assert(cellIndex < width * height);
+	const faces = [
+		...truncatedCuboctahedron.squares,
+		...truncatedCuboctahedron.hexagons,
+		...truncatedCuboctahedron.octagons,
+	];
+	const face = faces[cellIndex];
 
-	const x = cellIndex % width;
-	const y = Math.floor(cellIndex / width);
+	return Array(26)
+		.fill()
+		.map((_, index) => index)
+		.filter((index) => {
+			if (index === cellIndex) {
+				return false;
+			}
 
-	const precedingCells = [];
-	precedingCells.push(y * width + (x + 3) % width);
-	precedingCells.push(y * width + (x + 1) % width);
-	precedingCells.push(((y + 3) % height) * width + x);
-	precedingCells.push(((y + 1) % height) * width + x);
+			const testFace = faces[index];
+			const sharedVertices = testFace.filter((vertice) => face.includes(vertice));
 
-	return precedingCells;
+			return sharedVertices.length === 2;
+		});
 };
 
 module.exports.generateInput = () => {

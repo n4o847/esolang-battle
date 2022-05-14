@@ -25,7 +25,7 @@ class App extends React.Component {
 			}
 
 			if (
-				['komabasai2018-day1', 'komabasai2018-day2', 'mayfes2022-day2'].includes(this.contestId)
+				['komabasai2018-day1', 'komabasai2018-day2'].includes(this.contestId)
 			) {
 				return 4;
 			}
