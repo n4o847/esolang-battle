@@ -13,7 +13,7 @@ mongoose.Promise = global.Promise;
 		{$set: {admin: false}},
 	);
 
-	for (const id of ['n4o847', 'kombubbu', 'naan112358']) {
+	for (const id of ['n4o847', 'finalexception', 'NOCO_1002', 'fabon-f']) {
 		{
 			const user = await User.findOne({email: `${id}@twitter.com`});
 			if (user) {
