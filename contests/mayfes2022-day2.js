@@ -49,7 +49,7 @@ module.exports.isValidAnswer = (input, output) => {
 		return (((a - b) % 12) * 5 + a + 21) % 60;
 	});
 	const check = range(lineNum).map(
-		(i) => sampleAnswer[i] === outputLines[i] % 60,
+		(i) => outputLines[i] !== 0 && sampleAnswer[i] === outputLines[i] % 60,
 	);
 	return !check.includes(false);
 };
