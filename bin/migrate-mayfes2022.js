@@ -51,7 +51,7 @@ mongoose.Promise = global.Promise;
 			name: '[TSG LIVE! 8] Live CodeGolf Contest Day2',
 			id: 'mayfes2022-day2',
 			start: new Date('2022-05-15T15:05:00+0900'),
-			end: new Date('2022-05-15T16:20:00+0900'),
+			end: new Date('2022-05-15T16:50:00+0900'),
 			description: {
 				ja: await fs.readFile('bin/rules/mayfes2022-day2-ja.md'),
 				en: '',
